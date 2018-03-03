@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView page_1,page_2,page_3;
     private ViewPager vpPager;
-    private PAdapter pAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
 
-        pAdapter = new PAdapter(getSupportFragmentManager());
+        PAdapter pAdapter = new PAdapter(getSupportFragmentManager());
         vpPager.setAdapter(pAdapter);
 
         vpPager.setCurrentItem(1);
